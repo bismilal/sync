@@ -1,0 +1,58 @@
+  
+import java.io.*;
+  
+class cons {
+    int num;
+    String name;
+  
+    // this would be invoked while an object
+    // of that class is created.
+    cons() { System.out.println("Constructor called"); }
+}
+  
+class GFG {
+    public static void main(String[] args)
+    {
+        // this would invoke default constructor.
+        cons cons1 = new cons();
+  
+        // Default constructor provides the default
+        // values to the object like 0, null
+        System.out.println(cons1.name);
+        System.out.println(cons1.num);
+    }
+}
+//////////////////////////////
+// Java Program to Illustrate Working of
+// Parameterized Constructor
+
+// Importing required inputoutput class
+import java.io.*;
+
+// Class 1
+class cons1 {
+	// data members of the class.
+	String name;
+	int id;
+
+	// Constructor would initialize data members
+	// With the values of passed arguments while
+	// Object of that class created
+	cons1(String name, int id)
+	{
+		this.name = name;
+		this.id = id;
+	}
+}
+
+// Class 2
+class GFG {
+	// main driver method
+	public static void main(String[] args)
+	{
+		// This would invoke the parameterized constructor.
+		cons1 cons = new cons1("adam", 1);
+		System.out.println("constructor Name :" + cons.name
+						+ " and constructor Id :" + cons.id);
+	}
+}
